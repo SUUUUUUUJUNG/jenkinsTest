@@ -10,6 +10,7 @@ public class MainController {
 	public String main() {
 		System.out.println("/ 주소 요청///////");
 		System.out.println("/ jenkins에서 자동인식 배포함");
+		System.out.println("/ aws 배포 테스트");
 
 		return "main";
 	}
