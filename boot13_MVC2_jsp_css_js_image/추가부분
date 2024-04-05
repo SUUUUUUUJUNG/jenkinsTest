@@ -1,0 +1,38 @@
+		<!-- JSP 사용 -->
+				<!-- JSP 사용 -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency> 
+<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+    <version>2.0.0</version><!--$NO-MVN-MAN-VER$-->
+</dependency> 
+			<!-- JSP 사용 -->
+			<!-- dev tools -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<scope>runtime</scope>
+			</dependency>
+			
+			
+				<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		
+		
+		
+		
+		<!-- 기존 Missing artifact javax.servlet.jsp.jstl:jstl:jar:1.2 오류코드-->
+<dependencies>
+      <dependency>
+    <groupId>javax.servlet.jsp.jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+		

@@ -1,0 +1,43 @@
+	1. jar=> war로 배포하는 프로젝트임  pom.xml 에서
+	<!--  추가부분///////////////////////-->
+		<packaging>war</packaging>
+	<!--  추가부분//////////////////-->
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		
+		<!-- mapper 추가 부분-->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	<!-- mapper 추가 부분 끝-->
+	</build>
+	
+	2. main.java에서 
+@SpringBootApplication
+@MapperScan(basePackages = "com.example.mapper")////////////////////////////////
+public class Boot13Mvc1Jsp1Application  extends SpringBootServletInitializer{/////////////
+	
+	
+////추가 부분
+	 @Override
+	 protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+	 // TODO Auto-generated method stub
+	 return builder.sources(Boot13Mvc1JspApplication.class);
+	 }
+/////	 설정 필요함 
+	
+	
